@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/about', function () {
+    return view('about');
+
+});
+Route::get('/store', function () {
+   $filter = request('style');
+
+   return 'this page is viewing <span style="color:red">'.$filter.'</span>;
 });
