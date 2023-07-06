@@ -13,12 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/about', function () {
-    return view('about');
+// Route::get('/', function () {
+//     return ('homepage');
 
+// });
+
+// Route::get('/about', function () {
+//     return ('about');
+
+// });
+
+// Route::get('/contact', function () {
+//     return ('contact');
+
+// });
+
+// home , about , contact , team , serviercs
+Route::get('home',function(){
+    return 'home';
 });
-Route::get('/store', function () {
-   $filter = request('style');
 
-   return 'this page is viewing <span style="color:red">'.$filter.'</span>;
+Route::get('about',function(){
+    return 'about';
+});
+
+Route::get('contact',function(){
+    return 'contact';
+});
+
+Route::get('team',function(){
+    return 'team';
+});
+
+Route::post('serviercs',function(){
+    return 'serviercs';
 });
